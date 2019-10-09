@@ -1,0 +1,60 @@
+{
+  "name": "@earthtone/pffp-helpers",
+  "version": "0.0.1",
+  "description": "A collection of point-free list operation helper functions",
+  "main": "dst/index.umd.js",
+  "module": "main.js",
+  "unpkg": "dist/index.unpkg.js",
+  "dependencies": {
+    "@earthtone/tiny-curry": "0.0.3",
+    "@earthtone/tiny-predicates": "0.0.2",
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "@earthtone/tiny-compose": "0.0.1",
+    "ava": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.8",
+    "ramda": "^0.26.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint . --fix",
+    "pretest": "npm run lint",
+    "test": "ava",
+    "prebuild": "npm run clean && npm test",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "js",
+    "fp",
+    "point-free",
+    "map",
+    "reduce"
+  ],
+  "author": "Tonio Hubilla <earthlyillusion@gmail.com>",
+  "license": "MIT",
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earthtone/pffp-helpers"
+  }
+}
