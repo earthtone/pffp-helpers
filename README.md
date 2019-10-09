@@ -1,5 +1,7 @@
 # Point-free Functional Programming Helpers
 
+![CI Status](https://travis-ci.org/earthtone/pffp-helpers.svg?branch=master)
+
 A collection of curried point-free implementations for common list operations.
 
 ---
